@@ -8,16 +8,16 @@
 // })
 
 (function swapMainImage() {
-    var imgSrc=document.getElementsByClassName('img-item')
-    for (let index = 0; index < imgSrc.length; index++) {
-        const img = imgSrc[index];
-        img.addEventListener('mouseenter', function(e) {
+    var imgsSrc=document.getElementsByClassName('img-item')
+    for (let index = 0; index < imgsSrc.length; index++) {
+        const img = imgsSrc[index];
+        img.addEventListener('mouseenter', () =>{
             setTimeout(function() {
                 document.getElementById('mainImageId').setAttribute('src', img.getAttribute('src'))
             },70)
         })
         
-        img.addEventListener('click', function(e) {
+        img.addEventListener('click', function() {
             setTimeout(function() {
                 
                 document.getElementById('contrastImg').setAttribute('src', img.getAttribute('src'))
